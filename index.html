@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="ms">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var langParam = params.get('lang');
+        if (langParam === 'ms') {
+          sessionStorage.setItem('site_lang', 'ms');
+          return;
+        }
+        if (langParam === 'en') {
+          sessionStorage.setItem('site_lang', 'en');
+        }
+        var fromEn = document.referrer && (document.referrer.indexOf('/en/') !== -1 || document.referrer.indexOf('/en') !== -1);
+        if (fromEn) {
+          sessionStorage.setItem('site_lang', 'ms');
+          return;
+        }
+        if (sessionStorage.getItem('site_lang') === 'ms') {
+          return;
+        }
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        window.location.replace('en/index.html' + search + hash);
+      } catch (e) {
+        window.location.replace('en/index.html');
+      }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wasiat Islam Online Singapura | WasiatKu by SmartWills</title>
+  <meta name="description"
+    content="Tulis wasiat Islam online dengan mudah, cepat dan patuh Syariah. Pilih pelan WasiatKu, fahami Faraid, dan rancang harta pusaka keluarga anda." />
+  <link rel="canonical" href="https://www.wasiatku.com.my/" />
+  <link rel="alternate" hreflang="ms-MY" href="https://www.wasiatku.com.my/" />
+  <link rel="alternate" hreflang="en-MY" href="https://www.wasiatku.com.my/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.wasiatku.com.my/" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="site-header__brand" href="index.html" aria-label="SmartWills WasiatKu home">
+        <img src="Asset/Web_Logo.png" alt="SmartWills WasiatKu" />
+      </a>
+
+      <div class="site-header__bar">
+        <nav class="site-header__nav" aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Laman Utama</a>
+          <details class="site-header__nav-dropdown">
+            <summary class="site-header__nav-toggle">
+              <span>Pelan &amp; Servis</span>
+              <span aria-hidden="true">▾</span>
+            </summary>
+            <div class="site-header__nav-menu" aria-label="Pelan dan servis">
+              <section class="site-header__nav-menu-group" aria-label="Pelan">
+                <h3>Pelan</h3>
+                <a href="Pelan%20%26%20Harga.html#wasiatku">
+                  <img src="Asset/Tabbed Form Icon/Wasiat_black.png" alt="" aria-hidden="true" />
+                  <span>WasiatKu</span>
+                </a>
+                <a href="Pelan%20%26%20Harga.html#smarthibah">
+                  <img src="Asset/Tabbed Form Icon/Hibah_black.png" alt="" aria-hidden="true" />
+                  <span>SmartHibah</span>
+                </a>
+                <a href="Pelan%20%26%20Harga.html#package">
+                  <img src="Asset/Tabbed Form Icon/Package_Icon.png" alt="" aria-hidden="true" />
+                  <span>Pakej</span>
+                </a>
+              </section>
+              <section class="site-header__nav-menu-group" aria-label="Servis">
+                <h3>Servis</h3>
+                <a href="Pelan%20%26%20Harga.html#smartfaraid">
+                  <img src="Asset/Tabbed Form Icon/Faraid_icon.png" alt="" aria-hidden="true" />
+                  <span>SmartFaraid</span>
+                </a>
+              </section>
+            </div>
+          </details>
+          <a href="Tentang Kami.html">Tentang Kami</a>
+          <a href="FAQ.html">Sumber</a>
+          <a href="Perkongsian.html">Perkongsian</a>
+          <a href="contact.html">Hubungi Kami</a>
+        </nav>
+
+        <div class="site-header__actions" aria-label="Site actions">
+          <details class="site-header__country">
+            <summary class="site-header__country-toggle" aria-label="Select country">
+              <span class="site-header__flag-ring"><img class="site-header__flag" src="Asset/Flags/Singapore flag.png"
+                  alt="" aria-hidden="true" /></span>
+              <span>SG</span>
+              <span class="site-header__country-arrow" aria-hidden="true">▾</span>
+            </summary>
+            <div class="site-header__country-menu" aria-label="Country options">
+              <section class="site-header__country-group" aria-label="SmartWills WasiatKu countries">
+                <h3>SmartWills WasiatKu</h3>
+                <button class="site-header__country-option is-muted" type="button" disabled aria-disabled="true">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Malaysia flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>MY</span>
+                </button>
+                <button class="site-header__country-option is-active" type="button" aria-current="true">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Singapore flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>SG</span>
+                </button>
+                <button class="site-header__country-option is-muted" type="button" disabled aria-disabled="true">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Indonesia flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>ID</span>
+                </button>
+                <button class="site-header__country-option is-muted" type="button" disabled aria-disabled="true">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Brunei flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>BN</span>
+                </button>
+              </section>
+              <section class="site-header__country-group" aria-label="SmartWills countries">
+                <h3>SmartWills</h3>
+                <a class="site-header__country-option" href="https://smartwills.com.my">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Malaysia flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>MY</span>
+                </a>
+                <a class="site-header__country-option" href="https://smartwills.com.sg">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Singapore flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>SG</span>
+                </a>
+                <a class="site-header__country-option" href="https://smartwills.com.hk">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Hong Kong flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>HK</span>
+                </a>
+                <a class="site-header__country-option" href="https://smartwills.co.th">
+                  <span class="site-header__flag-ring"><img src="Asset/Flags/Thailand flag.png" alt=""
+                      aria-hidden="true" /></span>
+                  <span>TH</span>
+                </a>
+              </section>
+            </div>
+          </details>
+          <details class="site-header__language">
+            <summary class="site-header__language-toggle" aria-label="Tukar bahasa">
+              <span>BM</span>
+              <span class="site-header__language-arrow" aria-hidden="true">▾</span>
+            </summary>
+            <div class="site-header__language-menu" aria-label="Pilihan bahasa">
+              <a class="is-active" href="index.html" lang="ms" aria-current="page">Bahasa Melayu</a>
+              <a href="en/index.html" lang="en" onclick="sessionStorage.setItem('site_lang', 'en')">English</a>
+            </div>
+          </details>
+          <a class="site-header__login" href="https://app.mysmartwills.com/portal/?company_id=4">Log Masuk</a>
+          <details class="site-header__mobile-menu">
+            <summary aria-label="Open navigation menu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </summary>
+            <div class="site-header__mobile-actions" aria-label="Mobile site actions">
+              <details class="site-header__country site-header__mobile-country">
+                <summary class="site-header__country-toggle" aria-label="Select country">
+                  <span class="site-header__flag-ring"><img class="site-header__flag"
+                      src="Asset/Flags/Singapore flag.png" alt="" aria-hidden="true" /></span>
+                  <span>SG</span>
+                  <span class="site-header__country-arrow" aria-hidden="true">▾</span>
+                </summary>
+                <div class="site-header__country-menu" aria-label="Country options">
+                  <section class="site-header__country-group" aria-label="SmartWills WasiatKu countries">
+                    <h3>SmartWills WasiatKu</h3>
+                    <button class="site-header__country-option is-muted" type="button" disabled aria-disabled="true">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Malaysia flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>MY</span>
+                    </button>
+                    <button class="site-header__country-option is-active" type="button" aria-current="true">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Singapore flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>SG</span>
+                    </button>
+                    <button class="site-header__country-option is-muted" type="button" disabled aria-disabled="true">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Indonesia flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>ID</span>
+                    </button>
+                    <button class="site-header__country-option is-muted" type="button" disabled aria-disabled="true">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Brunei flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>BN</span>
+                    </button>
+                  </section>
+                  <section class="site-header__country-group" aria-label="SmartWills countries">
+                    <h3>SmartWills</h3>
+                    <a class="site-header__country-option" href="https://smartwills.com.my">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Malaysia flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>MY</span>
+                    </a>
+                    <a class="site-header__country-option" href="https://smartwills.com.sg">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Singapore flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>SG</span>
+                    </a>
+                    <a class="site-header__country-option" href="https://smartwills.com.hk">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Hong Kong flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>HK</span>
+                    </a>
+                    <a class="site-header__country-option" href="https://smartwills.co.th">
+                      <span class="site-header__flag-ring"><img src="Asset/Flags/Thailand flag.png" alt=""
+                          aria-hidden="true" /></span>
+                      <span>TH</span>
+                    </a>
+                  </section>
+                </div>
+              </details>
+              <details class="site-header__mobile-language">
+                <summary class="site-header__language-toggle" aria-label="Tukar bahasa">
+                  <span>BM</span>
+                  <span class="site-header__language-arrow" aria-hidden="true">▾</span>
+                </summary>
+                <div class="site-header__language-menu" aria-label="Pilihan bahasa">
+                  <a class="is-active" href="index.html" lang="ms" aria-current="page">Bahasa Melayu</a>
+                  <a href="en/index.html" lang="en" onclick="sessionStorage.setItem('site_lang', 'en')">English</a>
+                </div>
+              </details>
+              <a class="site-header__mobile-login" href="https://app.mysmartwills.com/portal/?company_id=4">Log
+                Masuk</a>
+            </div>
+            <nav aria-label="Mobile navigation">
+              <a href="index.html" aria-current="page">Laman Utama</a>
+              <a href="Pelan%20%26%20Harga.html">Pelan &amp; Servis</a>
+              <a href="Tentang Kami.html">Tentang Kami</a>
+              <a href="FAQ.html">Sumber</a>
+              <a href="Perkongsian.html">Perkongsian</a>
+              <a href="contact.html">Hubungi Kami</a>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section hero" aria-label="Hero Page" data-hero-carousel>
+      <div class="hero-section__slides" aria-hidden="true">
+        <div class="hero-section__slide hero-section__slide--wasiat is-active" data-hero-slide></div>
+        <div class="hero-section__slide hero-section__slide--hibah" data-hero-slide></div>
+      </div>
+      <div class="hero-container site-container">
+        <div class="hero-content is-active" data-hero-content>
+          <p class="subtitle">Cara TERPINTAR dan TERPANTAS</p>
+
+          <h1 class="main-title">
+            <span class="text-green">Wariskan Cinta</span>
+            <span class="text-black">Wariskan Harta</span>
+          </h1>
+
+          <p class="description-highlight">
+            Tulis wasiat Islam yang sah dalam masa 15 minit sahaja.
+          </p>
+
+          <p class="description">
+            Lindungi orang tersayang anda, agihkan harta mengikut prinsip syarak dan tenangkan hati dengan
+            perancangan pusaka yang bijak.
+          </p>
+
+          <a href="https://app.mysmartwills.com/?item_id=80" class="btn-primary">
+            Mulakan Wasiat Sekarang
+          </a>
+        </div>
+
+        <div class="hero-content hero-content--hibah" data-hero-content hidden>
+          <p class="subtitle">Cara TERPINTAR dan TERPANTAS</p>
+
+          <h1 class="main-title">
+            <span class="text-green">Hibahkan Harta</span>
+            <span class="text-black">Lindungi Keluarga</span>
+          </h1>
+
+          <p class="description-highlight">
+            Sediakan hibah Islam yang sah dengan mudah dan tersusun.
+          </p>
+
+          <p class="description">
+            Pastikan harta anda terus sampai kepada orang tersayang, kurangkan risiko pertikaian, dan berikan
+            ketenangan hati melalui perancangan hibah yang bijak.
+          </p>
+
+          <a href="https://app.mysmartwills.com/?item_id=83" class="btn-primary">
+            Mulakan Hibah Sekarang
+          </a>
+        </div>
+      </div>
+      <div class="hero-section__dots" aria-label="Hero slides">
+        <button class="hero-section__dot is-active" type="button" aria-label="Show Wasiat hero slide"
+          aria-current="true" data-hero-dot="0"></button>
+        <button class="hero-section__dot" type="button" aria-label="Show Hibah hero slide" aria-current="false"
+          data-hero-dot="1"></button>
+      </div>
+    </section>
+
+    <section class="quick-plan-section" id="quick-plan" aria-label="Quick Plan">
+      <div class="quick-plan-section__inner" data-quick-plan>
+        <div class="quick-plan-tabs" role="tablist" aria-label="Plan category">
+          <button class="quick-plan-tab is-active" type="button" role="tab" aria-selected="true"
+            data-plan-tab="wasiatku">
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--dark" src="Asset/Tabbed Form Icon/Wasiat_black.png"
+              alt="" aria-hidden="true" />
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--light" src="Asset/Tabbed Form Icon/Wasiat_white.png"
+              alt="" aria-hidden="true" />
+            <span>WasiatKu</span>
+          </button>
+          <button class="quick-plan-tab" type="button" role="tab" aria-selected="false" data-plan-tab="smarthibah">
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--dark" src="Asset/Tabbed Form Icon/Hibah_black.png"
+              alt="" aria-hidden="true" />
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--light" src="Asset/Tabbed Form Icon/Hibah_white.png"
+              alt="" aria-hidden="true" />
+            <span>SmartHibah</span>
+          </button>
+          <button class="quick-plan-tab" type="button" role="tab" aria-selected="false" data-plan-tab="smartfaraid">
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--faraid" src="Asset/Tabbed Form Icon/Faraid_icon.png"
+              alt="" aria-hidden="true" />
+            <span>SmartFaraid</span>
+          </button>
+          <button class="quick-plan-tab" type="button" role="tab" aria-selected="false" data-plan-tab="package">
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--dark" src="Asset/Tabbed Form Icon/Package_Icon.png"
+              alt="" aria-hidden="true" />
+            <img class="quick-plan-tab__icon quick-plan-tab__icon--light"
+              src="Asset/Tabbed Form Icon/Package_Icon_White.png" alt="" aria-hidden="true" />
+            <span>Pakej</span>
+          </button>
+        </div>
+
+        <label class="quick-plan-mobile-select" aria-label="Plan category">
+          <select data-plan-select>
+            <option value="wasiatku">WasiatKu</option>
+            <option value="smarthibah">SmartHibah</option>
+            <option value="smartfaraid">SmartFaraid</option>
+            <option value="package">Pakej</option>
+          </select>
+        </label>
+
+        <div class="quick-plan-panel is-active" data-plan-panel="wasiatku">
+          <div class="quick-plan-control">
+            <label for="quick-plan-citizen">Warganegara</label>
+            <select id="quick-plan-citizen" data-citizen-select>
+              <option value="malaysia">Warganegara Singapura</option>
+              <option value="foreign">Bukan Warganegara Singapura</option>
+            </select>
+          </div>
+
+          <div class="quick-plan-options" aria-label="Pilihan Pelan">
+            <h2>Pilihan Pelan</h2>
+            <div class="quick-plan-cards">
+              <button class="quick-plan-card" type="button" aria-pressed="false">
+                <span data-wasiatku-plan="basic-name">WasiatKu Asas</span>
+                <strong data-wasiatku-plan="basic-price">SGD 280</strong>
+                <small>Penyediaan wasiat asas secara mudah dan patuh Syariah.</small>
+              </button>
+              <button class="quick-plan-card" type="button" aria-pressed="false">
+                <span data-wasiatku-plan="advanced-name">WasiatKu Lanjutan</span>
+                <strong data-wasiatku-plan="advanced-price">SGD 480</strong>
+                <small>Perancangan Wasiat Yang Lebih Lengkap dan Fleksibel.</small>
+              </button>
+            </div>
+          </div>
+
+          <a class="quick-plan-start" href="Pelan%20%26%20Harga.html#wasiatku">
+            <span>Mulakan</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        </div>
+
+        <div class="quick-plan-panel" data-plan-panel="smarthibah" hidden>
+          <div class="quick-plan-options quick-plan-options--wide" aria-label="Pilihan Pelan">
+            <h2>Pilihan Pelan</h2>
+            <div class="quick-plan-cards quick-plan-cards--three">
+              <button class="quick-plan-card" type="button" aria-pressed="false">
+                <span>SmartHibah Direct</span>
+                <strong>SGD 980</strong>
+                <small>Penyediaan wasiat asas secara mudah dan patuh Syariah.</small>
+              </button>
+              <button class="quick-plan-card" type="button" aria-pressed="false">
+                <span>SmartHibah Care</span>
+                <strong>SGD 1800</strong>
+                <small>Penyediaan wasiat asas secara mudah dan patuh Syariah.</small>
+              </button>
+              <button class="quick-plan-card is-unavailable" type="button" disabled aria-disabled="true">
+                <span>SmartHibah Amanah</span>
+                <strong>SGD 2800</strong>
+                <small>Penyediaan wasiat asas secara mudah dan patuh Syariah.</small>
+              </button>
+            </div>
+          </div>
+
+          <a class="quick-plan-start" href="Pelan%20%26%20Harga.html#smarthibah">
+            <span>Mulakan</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        </div>
+
+        <div class="quick-plan-panel quick-plan-panel--faraid" data-plan-panel="smartfaraid" hidden>
+          <div class="quick-plan-faraid-copy">
+            <h2>SmartFaraid</h2>
+            <p>
+              <strong>Panduan yang lebih jelas untuk memahami waris, aset dan pembahagian pusaka mengikut prinsip
+                Faraid.</strong>
+              SmartFaraid membantu individu dan keluarga Muslim membuat persediaan awal bagi urusan pembahagian
+              harta pusaka secara lebih teratur. Melalui semakan maklumat keluarga, aset dan tanggungan, waris dapat
+              memperoleh gambaran yang lebih jelas sebelum proses pentadbiran pusaka dimulakan.
+            </p>
+          </div>
+
+          <a class="quick-plan-start" href="Pelan%20%26%20Harga.html#smartfaraid">
+            <span>Lihatkan</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        </div>
+
+        <div class="quick-plan-panel quick-plan-panel--package" data-plan-panel="package" hidden>
+          <div class="quick-plan-options quick-plan-options--wide" aria-label="Pilihan Pelan">
+            <h2>Pilihan Pelan</h2>
+            <div class="quick-plan-cards quick-plan-cards--three quick-plan-package-cards">
+              <article class="quick-plan-package-card">
+                <button class="quick-plan-card quick-plan-package-card__toggle" type="button" aria-pressed="false"
+                  aria-expanded="false" aria-controls="quick-package-couple">
+                  <span>WasiatKu Couple</span>
+                  <strong>SGD 600</strong>
+                  <small>Wasiat lengkap untuk dua individu, bagi memastikan perancangan harta keluarga lebih tersusun
+                    dan jelas.</small>
+                </button>
+                <div class="quick-plan-package-detail" id="quick-package-couple" hidden>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>WasiatKu</b>Pilih 2 x WasiatKu Asas / Lanjutan</span></div>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>Cetakan Premium x 2</b></span></div>
+                  <a class="quick-plan-package-start" href="https://app.mysmartwills.com/event?id=WASIATKUCOUPLE">Beli
+                    Sekarang</a>
+                </div>
+              </article>
+              <article class="quick-plan-package-card">
+                <button class="quick-plan-card quick-plan-package-card__toggle" type="button" aria-pressed="false"
+                  aria-expanded="false" aria-controls="quick-package-flex">
+                  <span>SmartHibah Flex</span>
+                  <strong>SGD 2400</strong>
+                  <small>Hibah fleksibel untuk dua pilihan aset, sesuai bagi perlindungan harta yang lebih
+                    terancang.</small>
+                </button>
+                <div class="quick-plan-package-detail" id="quick-package-flex" hidden>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>SmartHibah</b>Pilih 2 x SmartHibah Care / Direct</span></div>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>Cetakan Premium x 2</b></span></div>
+                  <a class="quick-plan-package-start" href="https://app.mysmartwills.com/event?id=SMARTHIBAHFLEX">Beli
+                    Sekarang</a>
+                </div>
+              </article>
+              <article class="quick-plan-package-card">
+                <button class="quick-plan-card quick-plan-package-card__toggle" type="button" aria-pressed="false"
+                  aria-expanded="false" aria-controls="quick-package-personal">
+                  <span>Peribadi Set</span>
+                  <strong>SGD 2160</strong>
+                  <small>Pakej perancangan peribadi lengkap, menggabungkan wasiat dan hibah untuk perlindungan yang
+                    lebih menyeluruh.</small>
+                </button>
+                <div class="quick-plan-package-detail" id="quick-package-personal" hidden>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>WasiatKu</b>Pilih 1 x WasiatKu Asas / Lanjutan</span></div>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>SmartHibah</b>Pilih 1 x SmartHibah Direct / Care</span></div>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>Cetakan Premium x 2</b></span></div>
+                  <div class="quick-plan-package-feature"><img src="Asset/Tick_icon.png" alt=""
+                      aria-hidden="true" /><span><b>Ansuran</b>SGD 180/bulan selama 12 Bulan</span></div>
+                  <a class="quick-plan-package-start" href="https://app.mysmartwills.com/event/?id=PERIBADISET">Beli
+                    Sekarang</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <p class="quick-plan-help">
+          Perlukan bantuan memilih pelan?
+          <a href="http://wa.me/60182209929">Hubungi kami</a>
+          untuk maklumat lanjut.
+        </p>
+      </div>
+    </section>
+
+    <section class="metrics-section" aria-label="Metrics">
+      <div class="metrics-section__grid">
+        <article class="metric-card">
+          <strong>15 MIN</strong>
+          <span>Selesai Wasiat</span>
+        </article>
+        <article class="metric-card">
+          <strong>ISO 9001 : 2015</strong>
+          <span>Pensijilan Kualiti (QMS Certification)</span>
+        </article>
+        <article class="metric-card">
+          <strong>100%</strong>
+          <span>Patuh Syariah</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="how-it-works" aria-label="3 langkah">
+      <div class="container">
+        <div class="content-left">
+          <p class="subtitle">Cara Kerja - Mudah, Pantas dan Selamat.</p>
+          <h2 class="main-title">
+            <span class="highlight">3 Langkah Mudah</span><br />
+            <span class="main-title__line">Menulis Wasiat Anda</span>
+          </h2>
+          <p class="platform-desc">Platform SmartWills WasiatKu direka untuk semua rakyat Singapura.</p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h3>Daftar &amp; Pilih Pelan</h3>
+                <p>Pilih pelan SmartWills WasiatKu yang sesuai dengan bajet dan keperluan anda secara dalam talian.</p>
+                <p>Perkhidmatan penulisan wasiat yang cepat, mudah, dan patuh syarak.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h3>Isi Maklumat Wasiat</h3>
+                <p>Lengkapkan butiran wasiat anda termasuk maklumat peribadi, aset, penerima manfaat, pentadbir, dan
+                  penjaga yang memenuhi syarat-syarat Islam.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h3>Cetak, Tandatangan &amp; Simpan</h3>
+                <p>Cetak dokumen dan tandatangan di hadapan dua saksi untuk pengesahan sah undang-undang dan syarak.
+                  Pastikan ia disimpan di tempat yang selamat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <img src="Asset/Phone Mockup.webp" alt="Phone mockup showing SmartWills WasiatKu"
+            class="illustration-placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <section class="apakah-wasiat" aria-label="apakah wasiat">
+      <div class="apakah-wasiat__inner">
+        <h2 class="apakah-wasiat__title">
+          <span>Apakah</span>
+          <span>Wasiat ?</span>
+        </h2>
+        <div class="apakah-wasiat__copy">
+          <p>
+            Wasiat adalah dokumen sah yang membolehkan anda, sebagai pewasiat,
+            untuk menentukan individu tertentu atau badan amal sebagai penerima manfaat bagi menerima aset dan harta
+            benda anda setelah anda meninggal dunia.
+          </p>
+          <p>
+            Ia memastikan pembahagian harta anda dilakukan mengikut kehendak anda dan mengikut prinsip syarak.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="kepentingan-section" aria-label="Kepentingan">
+      <div class="kepentingan-section__inner">
+        <div class="kepentingan-section__header">
+          <h2 class="kepentingan-section__title">
+            <span>Kepentingan</span>
+            <span>Wasiat</span>
+          </h2>
+          <p>
+            Islam mengajar kita merancang untuk kehidupan selepas dunia ini. Wasiat bukan sahaja tanggungjawab, ia
+            adalah ibadah.
+          </p>
+        </div>
+
+        <div class="kepentingan-slider" data-slider>
+          <div class="kepentingan-slider__viewport" data-slider-viewport>
+            <div class="kepentingan-slider__track">
+              <article class="kepentingan-card">
+                <img src="Asset/Kepentingan/Kepentingan_1.webp" alt="Keluarga Muslim duduk bersama" />
+              </article>
+
+              <article class="kepentingan-card">
+                <img src="Asset/Kepentingan/Kepentingan_2.webp" alt="Keluarga berbincang dokumen wasiat" />
+              </article>
+
+              <article class="kepentingan-card">
+                <img src="Asset/Kepentingan/Kepentingan_3.webp" alt="Keluarga menyerahkan sumbangan di masjid" />
+              </article>
+
+              <article class="kepentingan-card">
+                <img src="Asset/Kepentingan/Kepentingan_4.webp" alt="Keluarga bersama datuk dan anak" />
+              </article>
+
+              <article class="kepentingan-card">
+                <img src="Asset/Kepentingan/Kepentingan_5.webp" alt="Keluarga meneliti perancangan pusaka" />
+              </article>
+
+              <article class="kepentingan-card">
+                <img src="Asset/Kepentingan/Kepentingan_6.webp" alt="Keluarga Muslim tersenyum bersama" />
+              </article>
+            </div>
+          </div>
+
+          <div class="kepentingan-slider__controls" aria-label="Kepentingan slider controls">
+            <button class="kepentingan-slider__button" type="button" data-slider-prev aria-label="Previous item">
+              ‹
+            </button>
+            <button class="kepentingan-slider__button" type="button" data-slider-next aria-label="Next item">
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kelebihan-section" aria-label="Kelebihan">
+      <div class="kelebihan-section__inner">
+        <div class="kelebihan-section__header">
+          <h2 class="kelebihan-section__title">
+            <span>Kelebihan</span>
+            <span>Kami</span>
+          </h2>
+          <p>Ini Adalah Sebab Anda Memilih SmartWills WasiatKu</p>
+        </div>
+
+        <div class="kelebihan-grid">
+          <article class="kelebihan-item">
+            <img src="Asset/Icon/Selamat%20%26%20Terjamin.png" alt="" aria-hidden="true" />
+            <h3>Selamat &amp; Terjamin</h3>
+            <p>Data anda dilindungi dengan enkripsi peringkat bank. Privasi anda adalah keutamaan kami.</p>
+          </article>
+
+          <article class="kelebihan-item">
+            <img src="Asset/Icon/Boleh akses bila-bila masa.png" alt="" aria-hidden="true" />
+            <h3>Boleh Akses Bila-Bila Masa</h3>
+            <p>Platform dalam talian kami boleh diakses 24/7 dari mana-mana peranti - komputer, tablet, atau telefon
+              bimbit.</p>
+          </article>
+
+          <article class="kelebihan-item">
+            <img src="Asset/Icon/Pensijilan.png" alt="" aria-hidden="true" />
+            <h3>Pensijilan ISO9001 : 2015</h3>
+            <p>Kami telah mendapat pensijilan ISO 9001:2015 untuk penyediaan wasiat dalam talian - jaminan kualiti
+              bertaraf antarabangsa.</p>
+          </article>
+
+          <article class="kelebihan-item">
+            <img src="Asset/Icon/Sokongan Pakar.png" alt="" aria-hidden="true" />
+            <h3>Sokongan Pakar</h3>
+            <p>Pasukan SmartWriter kami yang berpengalaman sedia membantu anda sepanjang proses penulisan wasiat.</p>
+          </article>
+
+          <article class="kelebihan-item">
+            <img src="Asset/Icon/Harga Manpu Pilih.png" alt="" aria-hidden="true" />
+            <h3>Harga Mampu Milik</h3>
+            <p>Pakej bermula dari SGD 280 sahaja. Tiada yuran tersembunyi - pelaburan terbaik untuk masa depan keluarga
+              anda.</p>
+          </article>
+
+          <article class="kelebihan-item">
+            <img src="Asset/Icon/Boleh Kemaskini.png" alt="" aria-hidden="true" />
+            <h3>Boleh Kemaskini</h3>
+            <p>Kemaskini wasiat anda bila-bila masa mengikut perubahan harta, keluarga atau kehendak anda.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-label="CTA">
+      <div class="cta-section__inner">
+        <h2 class="cta-section__title">
+          <span>Rancang Harta Anda Hari Ini</span>
+          <span>Lindungi Keluarga Anda Esok</span>
+        </h2>
+        <p>
+          Dengan WasiatKu, anda boleh merancang pembahagian harta secara mudah, selamat dan patuh Syariah.
+          Elakkan kesulitan kepada waris dan pastikan segala urusan berjalan dengan lancar.
+        </p>
+        <a href="https://app.mysmartwills.com/?item_id=80" class="cta-section__button">
+          Mulakan Wasiat Sekarang
+        </a>
+      </div>
+    </section>
+
+    <section class="testimonial-section" aria-label="Testimonial">
+      <div class="testimonial-section__inner">
+        <div class="testimonial-section__header">
+          <h2 class="testimonial-section__title">
+            <span>Pilihan Tepat</span>
+            <span>Dipercayai &amp; Diyakini</span>
+          </h2>
+          <p>
+            Penulisan testimoni ini adalah berdasarkan pengalaman peribadi pelanggan individu dan mungkin berbeza
+            bagi setiap individu. Tiada sebarang ganjaran atau imbuhan diberikan untuk ulasan ini. Prestasi masa lalu
+            bukan petunjuk bagi pulangan masa hadapan.
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "Alhamdulillah, mudah sangat guna WasiatKu. Dalam masa 20 minit wasiat saya siap. Sangat puas hati
+              dengan perkhidmatan yang patuh syariah ini."
+            </p>
+            <div class="testimonial-card__person">
+              <h3>Ahmad Firdaus</h3>
+              <p>Umur 38, Jurutera, Kuala Lumpur</p>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "Saya dah lama tangguhkan bab wasiat ni. Selepas guna WasiatKu, rasa lega sangat. Harga berpatutan,
+              proses senang, dan yang penting patuh syariah."
+            </p>
+            <div class="testimonial-card__person">
+              <h3>Siti Hajar</h3>
+              <p>Umur 45, Guru, Johor Bahru</p>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "Selepas bapa saya meninggal tanpa wasiat, saya faham betapa pentingnya wasiat. Syukran WasiatKu
+              kerana memudahkan proses ini untuk semua orang."
+            </p>
+            <div class="testimonial-card__person">
+              <h3>Muhammad Hafiz</h3>
+              <p>Umur 52, Pengurus, Selangor</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-label="FAQ">
+      <div class="faq-section__inner">
+        <div class="faq-section__intro">
+          <h2 class="faq-section__title">
+            <span>Ada Soalan?</span>
+            <span>Ini Jawapannya</span>
+          </h2>
+          <p>
+            Masih ada soalan mengenai wasiat Islam?<br />
+            Baca soalan lazim kami atau hubungi terus pasukan profesional kami.
+          </p>
+          <a class="faq-section__button" href="FAQ.html">
+            <span>Masih Ada Soalan?</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <span class="faq-item__number">01</span>
+            <div class="faq-item__content">
+              <h3>Mengapa saya perlu membuat wasiat?</h3>
+              <p>
+                Penulisan wasiat merupakan alternatif bagi pewasiat untuk menyimpan hasratnya tentang bagaimana
+                asetnya perlu diagihkan selepas mereka meninggal dunia selain diagihkan secara faraid.
+              </p>
+              <p>
+                Tanpa adanya wasiat, perlantikan pentadbir dan proses menguruskan harta pusaka akan menjadi rumit
+                dan memakan masa yang lama dan kos yang tinggi.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <span class="faq-item__number">02</span>
+            <div class="faq-item__content">
+              <h3>Bolehkah saya melantik SmartWriter sebagai saksi?</h3>
+              <p>Ya, anda boleh melantik kami sebagai saksi.</p>
+              <p>
+                Walaubagaimanapun, WasiatKu berhak mengenakan bayaran sehingga maksimum SGD 100 bagi setiap saksi
+                untuk setiap wasiat yang diproses.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <span class="faq-item__number">03</span>
+            <div class="faq-item__content">
+              <h3>Adakah anda memerlukan peguam untuk sediakan wasiat?</h3>
+              <p>Di Singapura, undang-undang tidak mewajibkan wasiat disediakan oleh peguam.</p>
+              <p>
+                Selagi wasiat itu dalam bentuk bertulis, ditandatangani dengan betul, dan memenuhi kehendak
+                perundangan yang berkaitan, ia dianggap sah dan berkuatkuasa.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <span class="faq-item__number">04</span>
+            <div class="faq-item__content">
+              <h3>Adakah wasiat dalam talian sah?</h3>
+              <p>
+                Wasiat dalam talian kami adalah dokumen yang mengikat secara sah. Ia dirangka khas oleh Panel Peguam
+                kami dan disemak oleh Penasihat Undang-Undang dalaman untuk memastikan ia mematuhi perundangan
+                Singapura dan prinsip Syariah.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-label="Footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div>
+          <img class="site-footer__logo" src="Asset/Footer Icon/WK logo_horizontal.png" alt="SmartWills WasiatKu" />
+          <h2>WasiatKu Fintech Sdn. Bhd.</h2>
+          <p class="site-footer__company-id">(UEN No. 202231612H)</p>
+        </div>
+        <img class="site-footer__slogan" src="Asset/Footer Icon/Slogan.png" alt="Cara paling pintar dan pantas" />
+      </div>
+
+      <div class="site-footer__info">
+        <div class="site-footer__contact">
+          <section>
+            <h3>Customer Service</h3>
+            <p>Hotline: <a href="tel:+6589129929">+65 8912 9929</a><br />Customer Service: <a href="tel:+6589139929">+65
+                8913 9929</a></p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <a href="mailto:enquiry@smartwills.com.sg">enquiry@smartwills.com.sg</a>
+          </section>
+        </div>
+
+        <section class="site-footer__address">
+          <h3>Address - Headquarters</h3>
+          <p>
+            1, North Bridge Road,<br />
+            #06-16 High Street Centre,<br />
+            Singapore 179094
+          </p>
+          <a class="site-footer__map"
+            href="https://www.google.com/maps/search/?api=1&query=1+North+Bridge+Road%2C+%2306-16+High+Street+Centre%2C+Singapore+179094"
+            target="_blank" rel="noopener noreferrer" aria-label="Open office address in Google Maps">
+            <img src="Asset/Footer Icon/Google Maps.png" alt="" aria-hidden="true" />
+            <span>Google Maps</span>
+          </a>
+        </section>
+      </div>
+
+      <div class="site-footer__bottom">
+        <div class="site-footer__legal">
+          <p>© 2023 - 2026 All rights reserved | WasiatKu.com.my</p>
+          <div class="site-footer__socials" aria-label="Social media links">
+            <a href="https://www.facebook.com/wasiatku.com.my/" aria-label="Facebook">
+              <img src="Asset/Footer Icon/Facebook.png" alt="" aria-hidden="true" />
+            </a>
+            <a href="https://www.youtube.com/channel/UC4sIsrzxOq_4FgoPdi-83Rw" aria-label="Youtube">
+              <img src="Asset/Footer Icon/Youtube.png" alt="" aria-hidden="true" />
+            </a>
+            <a href="https://www.instagram.com/wasiatku.com.my?igsh=MTU5bWZiMWZjZjRkMw%3D%3D%20%2F"
+              aria-label="Instagram">
+              <img src="Asset/Footer Icon/Instagram.png" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+        <img class="site-footer__certifications" src="Asset/Footer Icon/Certification_Logo.png"
+          alt="Certification logos" />
+      </div>
+    </div>
+  </footer>
+  <a id="chatbot-toggle" href="http://wa.me/60182209929" aria-label="Chat on WhatsApp">
+    <img src="Asset/Suri.gif" alt="" aria-hidden="true" />
+  </a>
+  <script>
+    (() => {
+      const sections = Array.from(document.querySelectorAll("main > section"));
+
+      if (!sections.length) {
+        return;
+      }
+
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      document.querySelectorAll("[data-hero-carousel]").forEach((carousel) => {
+        const slides = Array.from(carousel.querySelectorAll("[data-hero-slide]"));
+        const contents = Array.from(carousel.querySelectorAll("[data-hero-content]"));
+        const dots = Array.from(carousel.querySelectorAll("[data-hero-dot]"));
+
+        if (slides.length < 2) {
+          return;
+        }
+
+        let activeSlide = slides.findIndex((slide) => slide.classList.contains("is-active"));
+        activeSlide = activeSlide >= 0 ? activeSlide : 0;
+        let heroTimer;
+
+        const setHeroSlide = (nextSlide) => {
+          slides[activeSlide].classList.remove("is-active");
+          contents[activeSlide]?.classList.remove("is-active");
+          dots[activeSlide]?.classList.remove("is-active");
+          dots[activeSlide]?.setAttribute("aria-current", "false");
+          if (contents[activeSlide]) {
+            contents[activeSlide].hidden = true;
+          }
+
+          activeSlide = (nextSlide + slides.length) % slides.length;
+          slides[activeSlide].classList.add("is-active");
+          contents[activeSlide]?.classList.add("is-active");
+          dots[activeSlide]?.classList.add("is-active");
+          dots[activeSlide]?.setAttribute("aria-current", "true");
+          if (contents[activeSlide]) {
+            contents[activeSlide].hidden = false;
+          }
+        };
+
+        const startHeroTimer = () => {
+          if (prefersReducedMotion) {
+            return;
+          }
+
+          window.clearInterval(heroTimer);
+          heroTimer = window.setInterval(() => {
+            setHeroSlide(activeSlide + 1);
+          }, 8000);
+        };
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            setHeroSlide(index);
+            startHeroTimer();
+          });
+        });
+
+        startHeroTimer();
+      });
+
+      if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        sections.forEach((section) => section.classList.add("section-visible"));
+      } else {
+        document.body.classList.add("motion-ready");
+
+        const revealSection = (section) => {
+          section.classList.add("section-visible");
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                revealSection(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            rootMargin: "0px 0px -12% 0px",
+            threshold: 0.16,
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      }
+
+      document.querySelectorAll("[data-slider]").forEach((slider) => {
+        const viewport = slider.querySelector("[data-slider-viewport]");
+        const previous = slider.querySelector("[data-slider-prev]");
+        const next = slider.querySelector("[data-slider-next]");
+
+        if (!viewport || !previous || !next) {
+          return;
+        }
+
+        const scrollSlider = (direction) => {
+          const firstCard = viewport.querySelector(".kepentingan-card");
+          const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : viewport.clientWidth;
+          const track = viewport.querySelector(".kepentingan-slider__track");
+          const gap = track ? parseFloat(window.getComputedStyle(track).columnGap) || 0 : 0;
+
+          viewport.scrollBy({
+            left: direction * (cardWidth + gap),
+            behavior: "smooth",
+          });
+        };
+
+        previous.addEventListener("click", () => scrollSlider(-1));
+        next.addEventListener("click", () => scrollSlider(1));
+      });
+
+      document.querySelectorAll("[data-quick-plan]").forEach((quickPlan) => {
+        const tabs = Array.from(quickPlan.querySelectorAll("[data-plan-tab]"));
+        const panels = Array.from(quickPlan.querySelectorAll("[data-plan-panel]"));
+        const planSelect = quickPlan.querySelector("[data-plan-select]");
+        const planCards = Array.from(quickPlan.querySelectorAll(".quick-plan-card:not(:disabled)"));
+        const citizenSelect = quickPlan.querySelector("[data-citizen-select]");
+        const wasiatkuPlans = {
+          "basic-name": quickPlan.querySelector('[data-wasiatku-plan="basic-name"]'),
+          "basic-price": quickPlan.querySelector('[data-wasiatku-plan="basic-price"]'),
+          "advanced-name": quickPlan.querySelector('[data-wasiatku-plan="advanced-name"]'),
+          "advanced-price": quickPlan.querySelector('[data-wasiatku-plan="advanced-price"]'),
+        };
+
+        const planCopy = {
+          malaysia: {
+            "basic-name": "WasiatKu Asas",
+            "basic-price": "SGD 280",
+            "advanced-name": "WasiatKu Lanjutan",
+            "advanced-price": "SGD 480",
+          },
+          foreign: {
+            "basic-name": "WasiatKu Plus Asas",
+            "basic-price": "SGD 330",
+            "advanced-name": "WasiatKu Plus Lanjutan",
+            "advanced-price": "SGD 530",
+          },
+        };
+
+        const setPlanType = (planType) => {
+          tabs.forEach((tab) => {
+            const isActive = tab.dataset.planTab === planType;
+            tab.classList.toggle("is-active", isActive);
+            tab.setAttribute("aria-selected", String(isActive));
+          });
+
+          panels.forEach((panel) => {
+            const isActive = panel.dataset.planPanel === planType;
+            panel.hidden = !isActive;
+            panel.classList.toggle("is-active", isActive);
+          });
+
+          if (planSelect && planSelect.value !== planType) {
+            planSelect.value = planType;
+          }
+
+          if (planType !== "package") {
+            quickPlan.querySelectorAll('[data-plan-panel="package"] .quick-plan-card:not(:disabled)').forEach((card) => {
+              card.classList.remove("is-selected");
+              card.closest(".quick-plan-package-card")?.classList.remove("is-selected");
+              card.setAttribute("aria-pressed", "false");
+              card.setAttribute("aria-expanded", "false");
+            });
+            quickPlan.querySelectorAll('[data-plan-panel="package"] .quick-plan-package-detail').forEach((detail) => {
+              detail.hidden = true;
+            });
+          }
+        };
+
+        const updateCitizenPlans = () => {
+          if (!citizenSelect) return;
+          const copy = planCopy[citizenSelect.value] || planCopy.singapore;
+          Object.entries(copy).forEach(([key, value]) => {
+            if (wasiatkuPlans[key]) {
+              wasiatkuPlans[key].textContent = value;
+            }
+          });
+        };
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => setPlanType(tab.dataset.planTab));
+        });
+
+        if (planSelect) {
+          planSelect.addEventListener("change", () => setPlanType(planSelect.value));
+        }
+
+        planCards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const panel = card.closest("[data-plan-panel]");
+            const panelCards = panel
+              ? Array.from(panel.querySelectorAll(".quick-plan-card:not(:disabled)"))
+              : planCards;
+            const isPackagePanel = panel?.dataset.planPanel === "package";
+            const shouldOpenPackage = isPackagePanel && !card.classList.contains("is-selected");
+
+            panelCards.forEach((item) => {
+              const isSelected = item === card && (!isPackagePanel || shouldOpenPackage);
+              item.classList.toggle("is-selected", isSelected);
+              item.setAttribute("aria-pressed", String(isSelected));
+              if (isPackagePanel) {
+                item.closest(".quick-plan-package-card")?.classList.toggle("is-selected", isSelected);
+                item.setAttribute("aria-expanded", String(isSelected));
+                const detail = item.getAttribute("aria-controls")
+                  ? document.getElementById(item.getAttribute("aria-controls"))
+                  : null;
+                if (detail) {
+                  detail.hidden = !isSelected;
+                }
+              }
+            });
+          });
+        });
+
+        if (citizenSelect) {
+          citizenSelect.addEventListener("change", updateCitizenPlans);
+          updateCitizenPlans();
+        }
+      });
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      document.querySelectorAll(".site-header__nav-dropdown").forEach((dropdown) => {
+        let closeTimer;
+
+        const openMenu = () => {
+          window.clearTimeout(closeTimer);
+          dropdown.open = true;
+        };
+
+        const closeMenu = () => {
+          window.clearTimeout(closeTimer);
+          closeTimer = window.setTimeout(() => {
+            if (!dropdown.matches(":hover") && !dropdown.matches(":focus-within")) {
+              dropdown.open = false;
+            }
+          }, 120);
+        };
+
+        dropdown.addEventListener("mouseenter", openMenu);
+        dropdown.addEventListener("mouseleave", closeMenu);
+        dropdown.addEventListener("focusin", openMenu);
+        dropdown.addEventListener("focusout", closeMenu);
+
+        dropdown.querySelector("summary")?.addEventListener("click", (event) => {
+          event.preventDefault();
+          window.location.href = "Pelan%20%26%20Harga.html";
+        });
+      });
+
+      document
+        .querySelectorAll(".site-header__mobile-menu > summary")
+        .forEach((summary) => {
+          summary.addEventListener("click", (event) => {
+            const details = summary.parentElement;
+            if (details instanceof HTMLDetailsElement) {
+              event.preventDefault();
+              details.open = !details.open;
+            }
+          });
+        });
+
+      document.querySelectorAll(".quick-plan-tabs, .harga-plan-tabs").forEach((tabScroller) => {
+        const updateTabFade = () => {
+          const maxScroll = tabScroller.scrollWidth - tabScroller.clientWidth;
+          const hasOverflow = maxScroll > 2;
+          const edgeTolerance = 24;
+          const hasLeft = hasOverflow && tabScroller.scrollLeft > edgeTolerance;
+          const hasRight = hasOverflow && tabScroller.scrollLeft < maxScroll - edgeTolerance;
+
+          tabScroller.classList.toggle("has-left-fade", hasLeft);
+          tabScroller.classList.toggle("has-right-fade", hasRight);
+        };
+
+        tabScroller.addEventListener("scroll", updateTabFade, { passive: true });
+        window.addEventListener("resize", updateTabFade);
+        tabScroller.querySelectorAll("button").forEach((button) => {
+          button.addEventListener("click", () => window.requestAnimationFrame(updateTabFade));
+        });
+        updateTabFade();
+      });
+    })();
+  </script>
+</body>
+
+</html>
